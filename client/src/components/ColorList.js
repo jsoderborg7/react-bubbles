@@ -19,10 +19,9 @@ const ColorList = ({ colors, updateColors }) => {
   const saveEdit = e => {
     e.preventDefault();
     axiosWithAuth()
-      .post('/colors', color)
+      .put(`/colors/${colorToEdit.id}`, colorToEdit)
       .then(res =>{
-        console.log('post request', res)
-        updateColors(...colors, color)
+        console.log('put request', res)
       })
       .catch(err => console.log(err.response))
   };
