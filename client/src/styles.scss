@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One|Luckiest+Guy|Permanent+Marker&display=swap');
 
 html,
 body,
@@ -8,10 +9,14 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+  background-image: url(pawel-czerwinski-LaBpnNQRf9E-unsplash.jpg);
+  background-size: cover;
+  box-sizing: border-box;
 }
 
 .App {
   font-family: "Montserrat", sans-serif;
+  font-size: 62.5%;
   text-align: center;
   display: flex;
 
@@ -25,19 +30,31 @@ body,
 }
 
 .bubble-wrap {
-  margin: 0 auto;
+  margin: auto;
   display: flex;
   flex-direction: column;
+  // background-color: white;
+  opacity: .9;
+  // border-radius: 20px;
+  // padding: 10%;
 }
 
 .colors-wrap {
   height: 100%;
   width: 300px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  background-color: whitesmoke;
+  opacity: .8;
+
+  p{
+    font-size: 3rem;
+    font-family: 'Luckiest Guy', cursive;
+  }
 
   ul {
     list-style: none;
     text-align: start;
+    font-size: 1.2rem;
 
     li {
       cursor: pointer;
@@ -64,6 +81,7 @@ form {
   margin-top: 60px;
   display: flex;
   flex-direction: column;
+  font-size: 1.2rem;
 
   legend {
     padding-left: 40px;
@@ -71,6 +89,8 @@ form {
     text-align: left;
     text-decoration: underline;
     margin-bottom: 16px;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 2rem;
   }
 
   label {
@@ -86,14 +106,81 @@ form {
 
 .button-row {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 0 36px 0 41px;
 
   button {
     border: none;
-    background-color: black;
-    color: white;
-    padding: 3px 8px;
+    border-radius: 10px;
+    background-color: #fa7c56;
+    padding: 5%;
     margin-top: 16px;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  button:hover{
+    background-color: #edd2a7;
   }
 }
+
+.welcomePage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  margin: auto;
+
+  h1{
+    font-size: 3rem;
+    font-family: 'Luckiest Guy', cursive;
+  }
+
+  .loginContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #a0aad5;
+    opacity: .8;
+    border-radius: 25px;
+    width: 50%;
+
+    p{
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 2rem;
+    }
+
+    .loginForm{
+      width: 70%;
+      margin: auto;
+
+      input{
+        padding: 2%;
+        width: 90%;
+        margin: auto;
+        margin-bottom: 4%;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+
+      button{
+        width: 50%;
+        margin: auto;
+        padding: 2%;
+        border-radius: 10px;
+        margin-bottom: 10%;
+        font-family: 'Luckiest Guy', cursive;
+        font-size: 1.5rem;
+        background-color: #fa7c56;
+        border: 1px solid black;
+      }
+
+      button:hover{
+        background-color: #edd2a7;
+      }
+    }
+  }
+}
+
