@@ -9,7 +9,7 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
-  background-image: url(sime-basioli-BRkikoNP0KQ-unsplash.jpg);
+  background-image: url(pawel-czerwinski-LaBpnNQRf9E-unsplash.jpg);
   background-size: cover;
   box-sizing: border-box;
 }
@@ -43,8 +43,8 @@ body,
   height: 100%;
   width: 300px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  background-color: white;
-  opacity: .9;
+  background-color: whitesmoke;
+  opacity: .8;
 
   p{
     font-size: 3rem;
@@ -106,17 +106,21 @@ form {
 
 .button-row {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 0 36px 0 41px;
 
   button {
     border: none;
     border-radius: 10px;
-    background-color: black;
-    color: white;
+    background-color: #fa7c56;
     padding: 5%;
     margin-top: 16px;
     font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  button:hover{
+    background-color: #edd2a7;
   }
 }
 
@@ -137,9 +141,9 @@ form {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: white;
+    background-color: #a0aad5;
     opacity: .8;
-    border-radius: 10px;
+    border-radius: 25px;
     width: 50%;
 
     p{
@@ -155,7 +159,7 @@ form {
         padding: 2%;
         width: 90%;
         margin: auto;
-        margin-bottom: 2%;
+        margin-bottom: 4%;
         border-radius: 5px;
         font-weight: bold;
         font-size: 1.5rem;
@@ -169,6 +173,12 @@ form {
         margin-bottom: 10%;
         font-family: 'Luckiest Guy', cursive;
         font-size: 1.5rem;
+        background-color: #fa7c56;
+        border: 1px solid black;
+      }
+
+      button:hover{
+        background-color: #edd2a7;
       }
     }
   }
