@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One|Luckiest+Guy|Permanent+Marker&display=swap');
 
 html,
 body,
@@ -8,10 +9,14 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+  background-image: url(sime-basioli-BRkikoNP0KQ-unsplash.jpg);
+  background-size: cover;
+  box-sizing: border-box;
 }
 
 .App {
   font-family: "Montserrat", sans-serif;
+  font-size: 62.5%;
   text-align: center;
   display: flex;
 
@@ -95,5 +100,59 @@ form {
     color: white;
     padding: 3px 8px;
     margin-top: 16px;
+  }
+}
+
+.welcomePage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  margin: auto;
+
+  h1{
+    font-size: 3rem;
+    font-family: 'Luckiest Guy', cursive;
+  }
+
+  .loginContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    opacity: .8;
+    border-radius: 10px;
+    width: 50%;
+
+    p{
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 2rem;
+    }
+
+    .loginForm{
+      width: 70%;
+      margin: auto;
+
+      input{
+        padding: 2%;
+        width: 90%;
+        margin: auto;
+        margin-bottom: 2%;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+
+      button{
+        width: 50%;
+        margin: auto;
+        padding: 2%;
+        border-radius: 10px;
+        margin-bottom: 10%;
+        font-family: 'Luckiest Guy', cursive;
+        font-size: 1.5rem;
+      }
+    }
   }
 }
