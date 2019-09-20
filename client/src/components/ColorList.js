@@ -11,15 +11,16 @@ const ColorList = ({ colors, updateColors }) => {
   const [editing, setEditing] = useState(false);
   const [colorToEdit, setColorToEdit] = useState(initialColor);
   const [adding, setAdding] = useState(true);
-  const [colorToAdd, setColorToAdd] = useState(initialColor);
+  const [color, setColor] = useState(initialColor);
 
   const editColor = color => {
     setEditing(true);
+    setAdding(false);
     setColorToEdit(color);
   };
 
   const saveEdit = e => {
-    e.preventDefault();
+    // e.preventDefault();
     axiosWithAuth()
       .put(`/colors/${colorToEdit.id}`, colorToEdit)
       .then(res =>{
@@ -38,11 +39,11 @@ const ColorList = ({ colors, updateColors }) => {
   };
 
   const addColor = e =>{
-    e.preventDefault();
+    // e.preventDefault();
     axiosWithAuth()
-      .post('/colors',colorToAdd)
+      .post('/colors',color)
       .then(res =>{
-        updateColors(...colors, colorToAdd)
+        updateColors(...colors, color)
       })
       .catch(err => console.log(err.response))
   };
@@ -96,7 +97,6 @@ const ColorList = ({ colors, updateColors }) => {
           </div>
         </form>
       )}
-      <div className="spacer" />
       {adding && (
         <form onSubmit={addColor}>
           <legend>add color</legend>
@@ -104,26 +104,26 @@ const ColorList = ({ colors, updateColors }) => {
             color name:
             <input
               onChange={e =>
-                setColorToAdd({ ...colorToAdd, colorToAdd: e.target.value })
+                setColor({ ...color, color: e.target.value })
               }
-              value={colorToAdd.colorToAdd}
+              value={color.color}
             />
           </label>
           <label>
             hex code:
             <input
               onChange={e =>
-                setColorToAdd({
-                  ...colorToAdd,
+                setColor({
+                  ...color,
                   code: { hex: e.target.value }
                 })
               }
-              value={colorToAdd.code.hex}
+              value={color.code.hex}
             />
           </label>
           <div className="button-row">
             <button type="submit">save</button>
-            <button onClick={() => setAdding(true)}>cancel</button>
+            <button onClick={() => setAdding(true)} >cancel</button>
           </div>
         </form>
       )}
